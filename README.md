@@ -142,4 +142,4 @@ The main objective of this project is to illustrate key findings, optimize produ
 - **Customer Feedback Integration:**
   - Incorporate customer feedback into the product development and improvement process to address customer needs and enhance product offerings.
 
-Implementing these strategies will help in optimizing product recommendations and enhancing the overall shopping experience for customers.
+In summary, implementing these strategies will help in optimizing product recommendations and enhancing the overall shopping experience for customers.

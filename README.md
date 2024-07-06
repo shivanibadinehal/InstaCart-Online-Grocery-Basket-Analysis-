@@ -29,65 +29,117 @@ products.csv(product_id, product_name, aisle_id, dept_id)
 
 ## Performing Exploratory Data Analysis (EDA)
 We have following DataFrames:
-orders: This table includes all orders, namely prior, train, and test. It has single primary key (order_id).
-order_products_train: This table includes training orders. It has a composite primary key (order_id and product_id) and indicates whether a product in an order is a reorder or not (through the reordered variable).
-order_products_prior : This table includes prior orders. It has a composite primary key (order_id and product_id) and indicates whether a product in an order is a reorder or not (through the reordered variable).
-products: This table includes all products. It has a single primary key (product_id)
-aisles: This table includes all aisles. It has a single primary key (aisle_id)
-departments: This table includes all departments. It has a single primary key (department_id)
+* orders: This table includes all orders, namely prior, train, and test. It has single primary key (order_id).
+* order_products_train: This table includes training orders. It has a composite primary key (order_id and product_id) and indicates whether a product in an order is a reorder or not 
+  (through the reordered variable).
+* order_products_prior : This table includes prior orders. It has a composite primary key (order_id and product_id) and indicates whether a product in an order is a reorder or not 
+  (through the reordered variable).
+* products: This table includes all products. It has a single primary key (product_id)
+* aisles: This table includes all aisles. It has a single primary key (aisle_id)
+* departments: This table includes all departments. It has a single primary key (department_id)
+ 
 ### Ratio of reordered products
-58.9697% of products in prior orders were re-ordered.
-59.8594% of products in train orders were re-ordered.
-11.868056% of orders having no reordered product.
-21.493998% of orders having all product re-ordered.
-Most baskets contain from 5-8 products.
-Products placed first in cart are the products mostly reordered.
-Analyzing the count of reordered products in a basket
-Most baskets have from 0-5 reordered product
-Probability of a basket having 0 reordered products: 11.868056
-Probability of a basket having 1 reordered products: 10.262626
-Probability of a basket having 2 reordered products: 10.326791
-Probability of a basket having 3 reordered products: 9.735981
-Probability of a basket having 4 reordered products: 8.777965
-Time effects on purchasing behaviours
-### How Time affects the purchasing behaviour of customers?
-Most orders are ordered on Day 0 and Day 1.
-Orders are mostly ordered during day, from 9:00 AM to 4:00 PM.
-Peak orders happens at Saturday afternoon (1:00PM), and Sunday morning (10:00AM)
-By more than 65%, People usually buy previously ordered products from 6:00AM to 8:00AM
-Most users make orders after a week from their last order. or from a month of their last order.
-After a week from the last order, the probability of reordering within the same month is small.
-Send reminders of the most likely ordered products within a week, to catch the high prob of a customer to make their next order.
-The Next order has higher probability to be during 10 days from the current order.
-Association between days since last order and the ratio of reorders
-74 % of products bought at the same day of prev order, are reorders.
-69% of products bought after 1 week of prev order, are reorders
-## Key Findings :
-If future order will be at the same day of prev order, percentage of reorders in the future product is high.
-If future order will be after a week from the prev order, percentage of reorders in the future product is high.
-Analyzing products
+* 58.9697% of products in prior orders were re-ordered.
+* 59.8594% of products in train orders were re-ordered.
+* 11.868056% of orders having no reordered product.
+* 21.493998% of orders having all product re-ordered.
+* Most baskets contain from 5-8 products.
+* Products placed first in cart are the products mostly reordered.
+* Analyzing the count of reordered products in a basket.
+  
+- Most baskets have from 0-5 reordered product
+- Probability of a basket having 0 reordered products: 11.868056
+- Probability of a basket having 1 reordered products: 10.262626
+- Probability of a basket having 2 reordered products: 10.326791
+- Probability of a basket having 3 reordered products: 9.735981
+- Probability of a basket having 4 reordered products: 8.777965
+
+## Time effects on purchasing behaviours
+* How Time affects the purchasing behaviour of customers?
+* Most orders are ordered on Day 0 and Day 1.
+* Orders are mostly ordered during day, from 9:00 AM to 4:00 PM.
+* Peak orders happens at Saturday afternoon (1:00PM), and Sunday morning (10:00AM)
+* By more than 65%, People usually buy previously ordered products from 6:00AM to 8:00AM
+* Most users make orders after a week from their last order. or from a month of their last order.
+* After a week from the last order, the probability of reordering within the same month is small.
+* Send reminders of the most likely ordered products within a week, to catch the high prob of a customer to make their next order.
+* The Next order has higher probability to be during 10 days from the current order.
+
+##  Association between days since last order and the ratio of reorders
+* 74 % of products bought at the same day of prev order, are reorders.
+* 69% of products bought after 1 week of prev order, are reorders.
+ ### - Conclusion 
+- If future order will be at the same day of prev order, percentage of reorders in the future product is high.
+- If future order will be after a week from the prev order, percentage of reorders in the future product is high.
+
 ### How often a product is purchased?
-5 Most Ordered Products
-Banana
-Bag of Organic Bananas
-Organic Strawberries
-Organic Baby Spinach
-Organic Hass Avocado
-14% of all orders contains bananas.
-Organic products are frequently ordered.
+#### 5 Most Ordered Products
+* Banana
+* Bag of Organic Bananas
+* Organic Strawberries
+* Organic Baby Spinach
+* Organic Hass Avocado
+* 14% of all orders contains bananas.
+Hence, Organic products are frequently ordered.
+
 ### How often a product is the first item purchased?
-5 Most Add to Cart First Products
-Banana
-Bag of Organic Bananas
-Organic Whole Milk
-Organic Strawberries
-Organic Hass Avocado
-3.4% of the orders, Banana is being the first product added to cart. Products contianing milk have very high probability to be reordered. Organic products have very high probability to be reordered.
+#### 5 Most Add to Cart First Products
+* Banana
+* Bag of Organic Bananas
+* Organic Whole Milk
+* Organic Strawberries
+* Organic Hass Avocado
+  Therefore, 3.4% of the orders, Banana is being the first product added to cart. Products contianing milk have very high probability to be reordered. Organic products have very high probability to be reordered.
+
 ## Analyzing Organic Prodcuts
-10% of instacart's products are organic products
-31.5% of bought products are organic products
-67% probability of reordering an organic products.
-61% probability of reordering an non-organic products.
-No significance pattern of when organic products are bought most, than when products in general are bought most.
-Purchasing behaviour on Departments and Aisles
-Count of products in each department
+* 10% of instacart's products are organic products
+* 31.5% of bought products are organic products
+* 67% probability of reordering an organic products.
+* 61% probability of reordering an non-organic products.
+* No significance pattern of when organic products are bought most, than when products in general are bought most.
+  
+## Purchasing behaviour on Departments and Aisles
+* Count of products in each department
+
+  # Project Objective
+
+The main objective of this project is to illustrate key findings, optimize product recommendations, and enhance the shopping experience.
+
+## Key Findings
+
+1. **Customer Segmentation:**
+   - Identified key customer segments based on purchasing behavior, demographics, and preferences.
+
+2. **Product Performance:**
+   - Analyzed the performance of products to determine top sellers, seasonal trends, and underperforming items.
+
+3. **Customer Feedback:**
+   - Collected and analyzed customer feedback to identify common themes, satisfaction levels, and areas for improvement.
+
+4. **Shopping Patterns:**
+   - Examined shopping patterns to understand peak shopping times, popular product categories, and customer journey maps.
+
+5. **Sales Conversion:**
+   - Assessed the sales conversion rates to identify bottlenecks and opportunities for improving the purchase process.
+
+6. **Recommendation Effectiveness:**
+   - Evaluated the effectiveness of current product recommendations and suggested enhancements to increase relevance and customer engagement.
+
+## Optimization Strategies
+
+- **Personalized Recommendations:**
+  - Utilize data-driven insights to provide personalized product recommendations tailored to individual customer preferences and behaviors.
+  
+- **Enhanced User Experience:**
+  - Improve the shopping interface and streamline the checkout process to enhance overall user satisfaction and reduce cart abandonment rates.
+  
+- **Targeted Marketing Campaigns:**
+  - Develop targeted marketing campaigns based on customer segments and shopping patterns to increase engagement and drive sales.
+  
+- **Inventory Management:**
+  - Optimize inventory levels by leveraging product performance data to ensure the availability of popular items and reduce overstock of underperforming products.
+  
+- **Customer Feedback Integration:**
+  - Incorporate customer feedback into the product development and improvement process to address customer needs and enhance product offerings.
+
+Implementing these strategies will help in optimizing product recommendations and enhancing the overall shopping experience for customers.

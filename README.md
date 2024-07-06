@@ -101,11 +101,11 @@ Hence, Organic products are frequently ordered.
 ## Purchasing behaviour on Departments and Aisles
 * Count of products in each department
 
-  # Project Objective
+ ## Project Objective
 
 The main objective of this project is to illustrate key findings, optimize product recommendations, and enhance the shopping experience.
 
-## Key Findings
+### Key Findings
 
 1. **Customer Segmentation:**
    - Identified key customer segments based on purchasing behavior, demographics, and preferences.
@@ -125,7 +125,7 @@ The main objective of this project is to illustrate key findings, optimize produ
 6. **Recommendation Effectiveness:**
    - Evaluated the effectiveness of current product recommendations and suggested enhancements to increase relevance and customer engagement.
 
-## Optimization Strategies
+### Optimization Strategies
 
 - **Personalized Recommendations:**
   - Utilize data-driven insights to provide personalized product recommendations tailored to individual customer preferences and behaviors.
